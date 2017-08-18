@@ -1,0 +1,209 @@
+@charset "UTF-8";
+@media only screen and (min-width: 1600px) {  /** Red **/
+  body {
+    /*background-color: red;/*Breakpoint-colour*/
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1599px) {  /** Brown **/
+  body {
+    /*background-color: brown;/*Breakpoint-colour*/
+  }
+}
+@media only screen and (max-width: 1200px) {  /** Teal **/
+  body {
+    /*background-color: teal;/*Breakpoint-colour*/
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1199px) {  /** Purple **/
+  body {
+    /*background-color: purple;/*Breakpoint-colour*/
+  }
+}
+@media only screen and (min-device-width: 990px) and (max-device-width: 1023px) {  /** Green **/
+  body {
+    /*background-color: green;/*Breakpoint-colour*/
+  }
+}
+@media only screen and (min-device-width: 769px) and (max-device-width: 989px) {  /** Orange **/
+  body {
+    /*background-color: orange;/*Breakpoint-colour*/
+  }
+}
+@media only screen and (min-device-width: 480px) and (max-device-width:768px) {  /** Grey **/
+  body {
+    /*background-color: grey;/*Breakpoint-colour*/
+  }
+  .field.field-name-field-job-time.field-type-text.field-label-hidden {
+    font-size: 13px;
+    padding: 0px;
+  }
+  .field.field-name-field-job-reference.field-type-text.field-label-inline.clearfix {
+    font-size: 14px;
+    padding: 0px;
+  }
+  .field.field-name-field-job-added-date.field-type-text.field-label-inline.clearfix {
+    font-size: 14px;
+    padding: 0px;
+  }
+  .field.field-name-field-job-recruiter-name.field-type-text.field-label-hidden {
+    font-size: 14px;
+    padding: 0px;
+  }
+  .field.field-name-field-job-location.field-type-location.field-label-hidden {
+    font-size: 14px;
+    padding: 0px;
+  }
+  .field.field-name-field-job-recruiter-contact.field-type-phone.field-label-hidden {
+    font-size: 14px;
+    padding: 0px;
+  }
+  .field.field-name-field-job-package-details.field-type-text.field-label-hidden {
+    font-size: 14px;
+    padding: 0px;
+  }
+  .field.field-name-body.field-type-text-with-summary.field-label-hidden {
+    font-size: 14px;
+    padding: 14px 0px 0px 0px;
+  }
+  .group-footer .social-icons-2 {
+    font-size: 17px;
+    padding: 0 0 15px;
+  }
+  .ds-2col-stacked > .group-left {
+    float:none;
+    width: 100%;
+    margin-top: 15px;
+  }
+  .ds-2col-stacked > .group-right {
+    float:none;
+    width: 100%;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 479px) {  /** Yellow **/
+  body {
+    /*background-color: yellow;/*Breakpoint-colour*/
+  }
+  .views-field.views-field-field-job-package-details {
+    float: none;
+    margin: 0 0 30px;
+  }
+  .field.field-name-field-job-time.field-type-text.field-label-hidden {
+    font-size: 13px;
+    padding: 0px;
+  }
+  .field.field-name-field-job-reference.field-type-text.field-label-inline.clearfix {
+    font-size: 14px;
+    padding: 0px;
+  }
+  .field.field-name-field-job-added-date.field-type-text.field-label-inline.clearfix {
+    font-size: 14px;
+    padding: 0px;
+  }
+  .field.field-name-field-job-recruiter-name.field-type-text.field-label-hidden {
+    font-size: 14px;
+    padding: 0px;
+  }
+  .field.field-name-field-job-location.field-type-location.field-label-hidden {
+    font-size: 14px;
+    padding: 0px;
+  }
+  .field.field-name-field-job-recruiter-contact.field-type-phone.field-label-hidden {
+    font-size: 14px;
+    padding: 0px;
+  }
+  .field.field-name-field-job-package-details.field-type-text.field-label-hidden {
+    font-size: 14px;
+    padding: 0px;
+  }
+  .field.field-name-body.field-type-text-with-summary.field-label-hidden {
+    font-size: 14px;
+    padding: 14px 0px 0px 0px;
+  }
+  .group-footer .social-icons-2 {
+    font-size: 17px;
+    padding: 0 0 15px;
+  }
+  .ds-2col-stacked > .group-left {
+    float:none;
+    width: 100%;
+    margin-top: 15px;
+  }
+  .ds-2col-stacked > .group-right {
+    float:none;
+    width: 100%;
+  }
+  .views-field.views-field-field-job-time {
+    font-size: 13px;
+  }
+  .views-field.views-field-body {
+    font-size: 14px;
+  }
+  .views-field.views-field-address {
+    font-size: 14px;
+  }
+  .views-field.views-field-field-job-package-details {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-device-width: 319px) {  /** Blue **/
+  body {
+    /*background-color: blue;/*Breakpoint-colour*/
+  }
+  .field.field-name-field-job-time.field-type-text.field-label-hidden {
+    font-size: 13px;
+    padding: 0px;
+  }
+  .field.field-name-field-job-reference.field-type-text.field-label-inline.clearfix {
+    font-size: 14px;
+    padding: 0px;
+  }
+  .field.field-name-field-job-added-date.field-type-text.field-label-inline.clearfix {
+    font-size: 14px;
+    padding: 0px;
+  }
+  .field.field-name-field-job-recruiter-name.field-type-text.field-label-hidden {
+    font-size: 14px;
+    padding: 0px;
+  }
+  .field.field-name-field-job-location.field-type-location.field-label-hidden {
+    font-size: 14px;
+    padding: 0px;
+  }
+  .field.field-name-field-job-recruiter-contact.field-type-phone.field-label-hidden {
+    font-size: 14px;
+    padding: 0px;
+  }
+  .field.field-name-field-job-package-details.field-type-text.field-label-hidden {
+    font-size: 14px;
+    padding: 0px;
+  }
+  .field.field-name-body.field-type-text-with-summary.field-label-hidden {
+    font-size: 14px;
+    padding: 14px 0px 0px 0px;
+  }
+  .group-footer .social-icons-2 {
+    font-size: 17px;
+    padding: 0 0 15px;
+  }
+  .ds-2col-stacked > .group-left {
+    float:none;
+    width: 100%;
+    margin-top: 15px;
+  }
+  .ds-2col-stacked > .group-right {
+    float:none;
+    width: 100%;
+  }
+  .views-field.views-field-field-job-time {
+    font-size: 13px;
+  }
+  .views-field.views-field-body {
+    font-size: 14px;
+  }
+  .views-field.views-field-address {
+    font-size: 14px;
+  }
+  .views-field.views-field-field-job-package-details {
+    font-size: 14px;
+  }
+}

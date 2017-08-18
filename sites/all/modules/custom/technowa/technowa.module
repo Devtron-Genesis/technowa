@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * Implements hook_init.
+ * Standard task run on page request.
+ */
+function technowa_init() {
+}
+
+/**
+ * Implements hook_form_alter.
+ * Alter forms for specific purposes.
+ */
+function technowa_form_alter(&$form, &$form_state, $form_id) {
+
+}
+
+/**
+ * Implements hook_form_alter().
+ *
+ */
+function technowa_form_i18n_string_locale_translate_edit_form_alter(&$form, &$form_state, $form_id) {
+  // Let's check at least for a user's role first.
+  global $user;
+  if (in_array('administrator', $user->roles)) {
+    // Simply unset the validation. Done.
+    // unset($form['#validate']);
+  }
+}
+
+/**
+ * Implements hook_url_outbound_alter()
+ */
+function technowa_url_outbound_alter(&$path, &$options, $original_path){
+  // if(strpos($path, '#') !== false) {
+  //   $pathExploded = explode('#', $path);
+  //   list($path, $options['fragment']) = $pathExploded;
+  // }
+}

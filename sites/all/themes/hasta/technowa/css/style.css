@@ -1,0 +1,330 @@
+/* General CSS */
+.navbar {
+    min-height: 80px;
+}
+.navbar-brand {
+  padding: 0;
+}
+.navbar-header {
+  float: left;
+  width: 8%;
+}
+
+.i18n-de .navbar-header {
+  float: left;
+  width: 8%;
+}
+.language-link {
+  float: left;
+}
+.language-link img {
+  margin-top: 20%;
+  width: 55%;
+}
+.row.no-margin {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+.no-gutter {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+.view-display-id-vacancies_search_block.collapsed {
+  display: none;
+}
+#views-exposed-form-vacancies-vacancies-search-block {
+  width: 40%;
+  margin: 0 auto;
+}
+#views-exposed-form-vacancies-vacancies-search-block .views-exposed-form .views-exposed-widget {
+  padding: 1em;
+}
+#views-exposed-form-vacancies-vacancies-search-block .views-exposed-form .views-exposed-widget .form-submit {
+  margin-top: 0px;
+}
+.page-user .text-box {
+  margin-bottom: 3em;
+}
+
+/*============ Bottom Menu ============ */
+
+.about ul.nav.navbar-nav li a {
+    padding: 5px 10px !important;
+}
+.region.region-footer .navbar-collapse {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+.region.region-footer .col-sm-6.col-md-2 {
+	width: 20%;
+}
+.about #header {
+	background: #283891;
+}
+.about #header .navbar-default .navbar-nav>li>a, .navbar-default .navbar-text {
+	color: #fff;
+}
+.region.region-footer .about ul.nav.navbar-nav li {
+    width: 100%;
+}
+.about .navbar-default .navbar-nav>.open>a:focus, .about .navbar-default .navbar-nav>.open>a:hover {
+	background-color: #fff;
+	color: #283891 !important;
+}
+.custom-menu li {
+    float: left;
+    margin: 5px 0px;
+}
+.custom-menu li a {
+    color: #283891 !important;
+    padding: 0px 15px;
+    border-right: #283891 2px solid !important;
+    font-weight: bold;
+}
+.custom-menu li a:hover {
+	background: none;
+}
+.custom-menu li:last-child a {
+    border: none !important;
+}
+.region.region-footer section.section-copyrights.section-less-padding {
+    background-color: #fff;
+}
+.custom-menu .navbar-default .navbar-nav>.open>a:focus, .custom-menu .navbar-default .navbar-nav>.open>a:hover {
+	background: #fff !important;
+}
+section.section-copyrights.section-less-padding .text span {
+    font-weight: bold;
+}
+section.section-copyrights.section-less-padding {
+	padding: 10px 0px;
+}
+
+/*============ PROFILE CSS ============ */
+
+	.profile .user-picture {
+	    float: left;
+	    margin: 0 1em 1em 0;
+	    width: 100%;
+	}
+	.user-picture .img-responsive:first-of-type {
+	    width: 140px;
+	}
+  div#edit-field-permanent-or-contract {
+    clear: both !important;
+    margin: 30px 0px 50px 0px;
+  }
+  div#edit-field-user-job-location {
+    clear: both !important;
+    margin: 50px 0px;
+  }
+  div#edit-field-user-job-timing {
+    clear: both !important;
+    margin: 50px 0px;
+  }
+  .form-item.form-type-checkbox.form-item-field-permanent-or-contract-und-permanent {
+    float: left;
+  }
+  .form-item.form-type-checkbox.form-item-field-permanent-or-contract-und-contract {
+    float: left;
+  }
+  .form-item.form-type-checkbox.form-item-field-user-job-location-und-preferred-location {
+    float: left;
+  }
+  .form-item.form-type-checkbox.form-item-field-user-job-location-und-all-areas {
+    float: left;
+  }
+  .form-item.form-type-checkbox.form-item-field-user-job-timing-und-part-time {
+    float: left;
+  }
+  .form-item.form-type-checkbox.form-item-field-user-job-timing-und-full-time {
+    float: left;
+  }
+  .form-item.form-type-checkboxes.form-item-field-permanent-or-contract-und > label {
+    font-weight: bold;
+  }
+  .form-item.form-type-checkboxes.form-item-field-user-job-location-und > label {
+    font-weight: bold;
+  }
+  .form-item.form-type-checkboxes.form-item-field-user-job-timing-und > label {
+    font-weight: bold;
+  }
+  .form-item.form-type-managed-file.form-item-field-user-cv-und-0 > label {
+    float: left;
+  }
+  .file-widget.form-managed-file.clearfix {
+    float: right;
+  }
+  .form-file {
+    float: left;
+  }
+  .description {
+    clear: both;
+  }
+
+/*  input#edit-field-user-job-timing-und-part-time {
+    display: contents !important;
+  }*/
+
+
+
+
+
+
+.field.field-name-field-job-time.field-type-text.field-label-hidden {
+  font-size: 17px;
+  padding: 7px 0px;
+}
+.field.field-name-field-job-reference.field-type-text.field-label-inline.clearfix {
+  font-size: 17px;
+  padding: 7px 0px;
+}
+.field.field-name-field-job-added-date.field-type-text.field-label-inline.clearfix {
+  font-size: 17px;
+  padding: 7px 0px;
+}
+.field.field-name-field-job-recruiter-name.field-type-text.field-label-hidden {
+  font-size: 17px;
+  padding: 7px 0px;
+}
+.field.field-name-field-job-location.field-type-location.field-label-hidden {
+  font-size: 17px;
+  padding: 7px 0px;
+}
+.field.field-name-field-job-recruiter-contact.field-type-phone.field-label-hidden {
+  font-size: 17px;
+  padding: 7px 0px;
+}
+.field.field-name-field-job-package-details.field-type-text.field-label-hidden {
+  font-size: 17px;
+  padding: 15px 0px;
+}
+.field.field-name-body.field-type-text-with-summary.field-label-hidden {
+  font-size: 17px;
+  padding: 15px 0px;
+}
+.front .field.field-name-body.field-type-text-with-summary.field-label-hidden {
+  padding: 0px;
+}
+.group-footer .social-icons-2 {
+  font-size: 17px;
+  padding: 15px 0px;
+}
+.node-job-post .fa {
+  padding-right: 10px;
+}
+.location-hidden {
+  display: none;
+}
+.map-link {
+  display: none;
+}
+
+
+.views-field.views-field-title {
+  padding: 10px 0px 0px 0px;
+}
+.views-field.views-field-body {
+  border-bottom: solid 1px #283891;
+  font-size: 17px;
+  padding: 20px 0px;
+}
+.views-field.views-field-address {
+  font-size: 17px;
+  padding: 10px 0px;
+}
+.views-field.views-field-field-job-package-details {
+    float: right;
+    font-size: 17px;
+    margin: -35px 0px 50px 0px;
+    padding: 0;
+    position: relative;
+}
+.locality {
+  float: left;
+  margin-right: 7px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.view.view-vacancies.view-id-vacancies.view-display-id-vacancies_page.view-dom-id-887d0b3d32e07b7d22b55c27092afc73 {
+    background-color: #eff4fc !important;
+}
+
+/*============ SLIDER CSS ============ */
+
+.background-imgholder {
+    width: 80%;
+}
+.section-side-image .text-inner {
+    padding: 30px 30px 30px 0;
+}
+.text-box.padding-7 {
+    padding: 30px;
+}
+.title-line-4 {
+    margin: 0 auto 30px auto;
+}
+a.btn.btn-orange-2.btn-xround.btn-medium {
+    margin-top: 20px;
+}
+.feature-box-103 ul {
+    list-style-type: disc !important;
+}
+.social-icons-3 {
+  text-align: left !important;
+}
+
+
+
+@media (min-width: 992px) {
+.col-md-offset-5 {
+    margin-left: 35%;
+}
+.col-md-7 {
+    width: 65%;
+}
+}
+@media (max-width: 768px) {
+.section-side-image .text-inner {
+    padding: 0px;
+}
+}
+
+
+@media (max-width: 1000px) {
+.navbar-header {
+  float: left;
+  width: 100%;
+}
+.navbar-default .navbar-brand {
+    width: 115px;
+}
+
+
+.i18n-de .navbar-header {
+  float: left;
+  width: 100%;
+}
+.i18n-de .navbar-default .navbar-brand {
+    width: 115px;
+}
+
+
+}
+
+@media (max-width: 992px) {
+.text > ul {
+    margin: 0 auto;
+    width: 300px;
+}
+}
+

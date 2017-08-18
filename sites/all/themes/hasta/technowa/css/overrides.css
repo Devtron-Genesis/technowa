@@ -1,0 +1,13 @@
+@charset "UTF-8";
+/* Insert your custom CSS styles */
+.navbar-brand {
+  /*display: none;*/
+}
+.topbar-right-items {
+    width: 52% !important;
+}
+@media (max-width: 630px) {
+.topbar-right-items {
+    width: 100% !important;
+}
+}
