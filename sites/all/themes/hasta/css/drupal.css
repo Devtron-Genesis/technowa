@@ -10,7 +10,7 @@ body{
 }
 ul li.leaf {
  list-style-image: none;
- list-style-type: none; 
+ list-style-type: none;
 }
 .dropdown .dropdown-menu{
   right: auto;
@@ -472,7 +472,9 @@ div.clock2 div.space {
 .gallery .previews{
   width: 22%;
 }
-
 .team-holder2 .img-holder img{
   width: 100%;
+}
+.fadeInRight br + a {
+  display: none;
 }
