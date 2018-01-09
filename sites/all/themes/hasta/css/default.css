@@ -30,68 +30,68 @@ Design and Developed by: Codelayers
 		+ image-left
 		+ image-holder
 		+ nodisplay-image
-	
+
 	3. Lists
 		+ iconlist
 		+ clientlogo-list
 		+ side-nav-list
 		+ category-links
-		+ tags 
-	
+		+ tags
+
 	4. Menu Backgrounds
 		+ Headers
-	
+
 	5. Topbar Styles
 		+ topbar
 		+ toplist
-	
+
 	6. Logo
 		+ logo
-	
+
 	7. Section Titles
 		+ section titles
-	
+
 	8. Page Section Styles
 		+ Section Styles
-	
+
 	9. Footer Styles
 		+ footer logo
 		+ lists
-	
-	
+
+
 	10. Parallax Sections
-	
+
 	11. Overlay Styles
 		+ Section Overlay
 		+ video overlay
-	
+
 	12. Social Links
 		+ social-icons-1
 		+ social-icons-2
 		+ social-icons-3
-	
+
 	13. Feature boxs
-	
+
 	14. Team Section
-	
+
 	15. Price Tables
-	
+
 	16. Blog Posts
-	
+
 	17. Testimonials
 
 	18. Footer Newsletter
-	
+
 	19. Video wrapers
-	
+
 	20. Progress bar
-	
+
 	21. Newsletter
-	
+
 	22. css progress circles
-	
+
 	23. Page Scroll to Top
-	
+
 ======================================
 [ END CSS TABLE CONTENT ]
 ======================================
@@ -111,7 +111,7 @@ body {
 }
 /* a link Styles
  ------------------------------ */
- 
+
 a, .btn {
 	-webkit-transition: all 0.3s ease-out 0s;
 	-moz-transition: all 0.3s ease-out 0s;
@@ -134,7 +134,7 @@ a {
 }
 /* Headungs
  ------------------------------ */
- 
+
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Roboto', sans-serif;
 	font-weight: normal;
@@ -572,7 +572,7 @@ ul {
 	border-bottom-color:#8ac700;
 }
 /*=============== Paddings ============= */
- 
+
 .no-top-padding {
 	padding-top: 0;
 }
@@ -599,7 +599,7 @@ ul {
 
 /* left padding
  ------------------------------ */
- 
+
 .padding-left-1 {
 	padding-left: 10px;
 }
@@ -627,7 +627,7 @@ ul {
 
 /* right padding
  ------------------------------ */
- 
+
 .padding-right-1 {
 	padding-right: 10px;
 }
@@ -729,7 +729,7 @@ ul {
  .lspace-sm{
 	letter-spacing:5px;
 	}
-	
+
 .lspace-1{
 	letter-spacing:10px;
 	}
@@ -748,7 +748,7 @@ ul {
 
 /* font weight styles
  ------------------------------ */
- 
+
 .font-weight-1 {
 	font-weight: 100;
 }
@@ -773,7 +773,7 @@ ul {
 .font-weight-8 {
 	font-weight: 800;
 }
- 
+
 /*=============== Columns without padding ============= */
 .no-gutter > [class*='col-'] {
 padding-right:0;
@@ -879,13 +879,13 @@ padding-left:0;
 }
 /* icon rounded
  ------------------------------ */
- 
+
 .iconbox-dxlarge.round, .iconbox-xlarge.round, .iconbox-large.round, .iconbox-xmedium.round, .iconbox-medium.round, .iconbox-smedium.round, .iconbox-small.round, .iconbox-tiny.round, .iconbox-xtiny.round {
 	border-radius: 100%;
 }
 /* iconboxes alignments
  ------------------------------ */
- 
+
 .iconbox-dxlarge.center, .iconbox-xlarge.center, .iconbox-large.center, .iconbox-xmedium.center, .iconbox-medium.center, .iconbox-smedium.center, .iconbox-small.center, .iconbox-tiny.center, .iconbox-xtiny.center {
 	margin: 0 auto;
 }
@@ -898,7 +898,7 @@ padding-left:0;
 	margin: 0px 0px 0px 20px;
 }
 /* iconboxe background colors
- ------------------------------ */	
+ ------------------------------ */
 .iconbox-dxlarge.dark, .iconbox-xlarge.dark, .iconbox-large.dark, .iconbox-xmedium.dark, .iconbox-medium.dark, .iconbox-smedium.dark, .iconbox-small.dark, .iconbox-tiny.dark, .iconbox-xtiny.dark {
 	color: #fff;
 	background-color: #242424;
@@ -912,7 +912,7 @@ padding-left:0;
 	background-color: #474747;
 }
 /* iconboxs with stroke
- ------------------------------ */	
+ ------------------------------ */
 .iconbox-dxlarge.grayoutline, .iconbox-xlarge.grayoutline, .iconbox-large.grayoutline, .iconbox-xmedium.grayoutline, .iconbox-medium.grayoutline, .iconbox-smedium.grayoutline, .iconbox-small.grayoutline, .iconbox-tiny.grayoutline, .iconbox-xtiny.grayoutline {
 	color: #fff;
 	background-color: none;
@@ -934,8 +934,8 @@ padding-left:0;
 	border: 1px solid #161616;
 }
 /* Icons Plain
- ------------------------------ */	
- 
+ ------------------------------ */
+
 .icon-plain-large {
 	font-size: 80px;
 	color: #242424;
@@ -973,7 +973,7 @@ padding-left:0;
 }
 /* plain icon alignments
  ------------------------------ */
- 
+
 .icon-plain-large.center, .icon-plain-medium.center, .icon-plain-small.center, .icon-plain-msmall.center, .icon-plain-tiny.center {
 	margin: 0 auto;
 }
@@ -987,7 +987,7 @@ padding-left:0;
 }
 /* plain icon colors
  ------------------------------ */
- 
+
 .icon-plain-large.dark, .icon-plain-medium.dark, .icon-plain-small.dark, .icon-plain-msmall.dark, .icon-plain-tiny.dark {
 	color: #242424;
 }
@@ -1002,7 +1002,7 @@ padding-left:0;
 }
 /*============ Text Boxes ============ */
 
-	
+
 .text-box-right {
 	display: block;
 	padding: 0px 0px 0px 99px;
@@ -1083,10 +1083,10 @@ padding-left:0;
 }
 /* text boxes margin and paddings
  ------------------------------ */
- 
+
  /* left box
  ------------------------------ */
- 
+
 .item-holder.marginbottom {
 	margin: 0 0 40px 0;
 }
@@ -1102,7 +1102,7 @@ padding-left:0;
 
 /* right box
  ------------------------------ */
- 
+
 .text-box-right.more-padding-1 {
 	padding: 0px 0px 0px 120px;
 }
@@ -1203,7 +1203,7 @@ a.read-more.cyan:hover {
 
 /* button styles
  ------------------------------ */
- 
+
 .btn {
 	padding: 10px 36px;
 	margin: 0px;
@@ -1221,7 +1221,7 @@ a.read-more.cyan:hover {
 }
 
 /* button radius
- ------------------------------ */ 
+ ------------------------------ */
 .btn.btn-xround {
 	border-radius: 20px;
 }
@@ -1771,7 +1771,7 @@ a.read-more.cyan:hover {
 	border-color:#8ac700;
 }
 /* Appstore buttons
- ------------------------------ */ 
+ ------------------------------ */
 
 .btn.appstore {
 	width: 200px;
@@ -2158,7 +2158,7 @@ a.read-more.cyan:hover {
 }
 
 /* blog1 tags
- ------------------------------ */	
+ ------------------------------ */
 .tags {
 	padding: 0px;
 	margin: 0px;
@@ -2191,7 +2191,7 @@ a.read-more.cyan:hover {
 }
 
 /*tags 2
- ------------------------------ */	
+ ------------------------------ */
 .tags-2 {
 	padding: 0px;
 	margin: 0px;
@@ -2215,7 +2215,7 @@ a.read-more.cyan:hover {
 }
 
 /* sidebar works list
- ------------------------------ */	
+ ------------------------------ */
 .sidebar-works {
 	width: 100%;
 	padding: 0px;
@@ -2420,13 +2420,13 @@ a.read-more.cyan:hover {
 	}
 .navbar-brand.less-top-padding {
     padding: 16px 0 0;
-}	
-	
+}
+
 /*============ Topbar Styles ============ */
 
 /* Topbar
  ------------------------------ */
- 
+
 .topbar {
 	float: left;
 	width: 100%;
@@ -2730,7 +2730,7 @@ a.topbar-btn:hover, a.topbar-btn.active {
  ------------------------------ */
 /* title bottom line 3
  ------------------------------ */
- 
+
 .title-line-3 {
 	width: 90px;
 	height: 3px;
@@ -2910,7 +2910,7 @@ a.topbar-btn:hover, a.topbar-btn.active {
 
 /* Footer title
  ------------------------------ */
- 
+
 .footer-title {
 	color: #fff;
 	float: left;
@@ -3162,7 +3162,7 @@ a.topbar-btn:hover, a.topbar-btn.active {
 }
 /* Footer Useful Links
  ------------------------------ */
-	
+
 .usefull-links {
 	padding: 0px;
 	margin: 0px;
@@ -3259,7 +3259,7 @@ a.topbar-btn:hover, a.topbar-btn.active {
 }
 /* Footer Address
  ------------------------------ */
-	
+
 .address-info {
 	padding: 0px;
 	margin: 0px;
@@ -3284,7 +3284,7 @@ a.topbar-btn:hover, a.topbar-btn.active {
 }
 /* Footer Address 2
  ------------------------------ */
-	
+
 .address-info-2 {
 	padding: 0px;
 	margin: 0px;
@@ -3310,7 +3310,7 @@ a.topbar-btn:hover, a.topbar-btn.active {
 
 /* Footer Address 3
  ------------------------------ */
-	
+
 .address-info-3 {
 	padding: 0px;
 	margin: 0px;
@@ -3336,8 +3336,8 @@ a.topbar-btn:hover, a.topbar-btn.active {
 
 
 /* Footer Tags
- ------------------------------ */	
- 
+ ------------------------------ */
+
 .footer-tags {
 	padding: 0px;
 	margin: 0px;
@@ -3394,8 +3394,8 @@ a.topbar-btn:hover, a.topbar-btn.active {
 	border-bottom: none;
 }
 /* Footer contact info with big icons
- ------------------------------ */	
- 
+ ------------------------------ */
+
 .contact-info-holder {
 	position: relative;
 	width: 100%;
@@ -3438,7 +3438,7 @@ a.topbar-btn:hover, a.topbar-btn.active {
 	background-color: #fd602c;
 }
 /*============ Parallax Sections ============ */
- 	
+
 .parallax-section1 {
 	width: 100%;
 	float: left;
@@ -3714,7 +3714,7 @@ a.topbar-btn:hover, a.topbar-btn.active {
 }
 /* Overlay opacity styles
  ------------------------------ */
- 
+
 .bg-opacity-1 {
 	background-color: rgba(0, 0, 0, 0.1);
 }
@@ -3801,7 +3801,7 @@ a.topbar-btn:hover, a.topbar-btn.active {
 	background-color: rgba(253, 96, 44, 0.5);
 }
 
-/*============ Social Links ============ */	
+/*============ Social Links ============ */
 
 .social-icons-1 {
 	width: 100%;
@@ -3882,7 +3882,7 @@ a.topbar-btn:hover, a.topbar-btn.active {
 }
 /* social icons 3 colors
  -----------------------------------------------*/
- 
+
  /* orange
  -------------------------------*/
 .social-icons-3.orange li a {
@@ -3984,7 +3984,7 @@ a.topbar-btn:hover, a.topbar-btn.active {
 }
 /* social icons blue
  -----------------------------------------------*/
- 
+
 .social-icons-3.blue li a {
 	color: #242424;
 	border:1px solid #e4e4e4;
@@ -4011,7 +4011,7 @@ a.topbar-btn:hover, a.topbar-btn.active {
 }
 /* Feature Box2
  ------------------------------ */
- 
+
 .feature-box2 {
 	position: relative;
 	border-top: 1px solid #F0F0F0;
@@ -4028,7 +4028,7 @@ a.topbar-btn:hover, a.topbar-btn.active {
 }
 /* Feature Box3
  ------------------------------ */
- 
+
 .feature-box3 {
 	position: relative;
 	float: left;
@@ -4071,7 +4071,7 @@ a.topbar-btn:hover, a.topbar-btn.active {
 }
 /* Feature Box5
  ------------------------------ */
- 
+
 .feature-box5 {
 	width: 100%;
 	position: relative;
@@ -4272,7 +4272,7 @@ a.topbar-btn:hover, a.topbar-btn.active {
 
 /* Feature Box14
  ------------------------------ */
- 
+
 .feature-box14 {
 	position: relative;
 	width: 100%;
@@ -4292,7 +4292,7 @@ a.topbar-btn:hover, a.topbar-btn.active {
 }
 /* Feature Box15
  ------------------------------ */
- 
+
 .feature-box15 {
 	width: 100%;
 	float: left;
@@ -4479,7 +4479,7 @@ a.topbar-btn:hover, a.topbar-btn.active {
 }
 /* Feature Box23
  ------------------------------ */
- 
+
 .feature-box23 {
 	width: 100%;
 	padding: 40px;
@@ -4519,7 +4519,7 @@ a.topbar-btn:hover, a.topbar-btn.active {
 
 /* Team Style 1
  ------------------------------ */
- 
+
 .team-box1 {
 	padding: 0px;
 }
@@ -4548,7 +4548,7 @@ a.topbar-btn:hover, a.topbar-btn.active {
 	overflow: hidden;
 }
 /* Team Style 2
- ------------------------------ */ 	
+ ------------------------------ */
 .team-holder2 {
 	width: 100%;
 	padding: 0px;
@@ -4594,7 +4594,7 @@ a.topbar-btn:hover, a.topbar-btn.active {
 	color: #fff;
 }
 /* Team Style 3
- ------------------------------ */ 	
+ ------------------------------ */
 .team-holder3 {
 	width: 100%;
 	padding: 0px;
@@ -4655,7 +4655,7 @@ a.topbar-btn:hover, a.topbar-btn.active {
 	color: #fff;
 }
 /* Team Style 4
- ------------------------------ */ 	
+ ------------------------------ */
 .team-holder4 {
 	width: 100%;
 	padding: 0px;
@@ -4785,7 +4785,7 @@ a.topbar-btn:hover, a.topbar-btn.active {
 }
 /* Price Table Hover and Active Styles
  -----------------------------------------------*/
- 
+
 .pricetable-holder.active .pricetable {
 	background-color: #f6f6f6;
 }
@@ -4806,7 +4806,7 @@ a.topbar-btn:hover, a.topbar-btn.active {
 }
 /* Price Table 2
  -----------------------------------------------*/
- 
+
 .pricetable-holder2 {
 	width: 100%;
 	padding: 0px;
@@ -4886,7 +4886,7 @@ a.topbar-btn:hover, a.topbar-btn.active {
 }
 /* Price Table 3
  -----------------------------------------------*/
- 
+
 .pricetable-holder3 {
 	width: 100%;
 	padding: 10px;
@@ -4971,7 +4971,7 @@ a.topbar-btn:hover, a.topbar-btn.active {
 
 /* post image holder
  -----------------------------------------------*/
- 
+
 .blog-img-holder {
 	width: 100%;
 	padding: 0px;
@@ -5007,13 +5007,13 @@ a.topbar-btn:hover, a.topbar-btn.active {
 	border-top: 20px solid #fd602c;
 }
 /* Date box colors
- -----------------------------------------------*/	
+ -----------------------------------------------*/
 .post-date-box.violet {
 	background-color: #fd602c;
 }
 /* post author image holder
- -----------------------------------------------*/	
- 
+ -----------------------------------------------*/
+
 .post-author-image {
 	position: absolute;
 	width: 80px;
@@ -5029,7 +5029,7 @@ a.topbar-btn:hover, a.topbar-btn.active {
 }
 /* post info icons
  -----------------------------------------------*/
- 
+
 .post-infoicon {
 	padding: 3px 12px 3px 12px;
 	margin: 0 5px 0 0;
@@ -5043,7 +5043,7 @@ a.topbar-btn:hover, a.topbar-btn.active {
 	background-color: #161616;
 }
 /* blog holder 1
- -----------------------------------------------*/		
+ -----------------------------------------------*/
 .blog-holder1 {
 	width: 100%;
 	float: left;
@@ -5076,7 +5076,7 @@ a.topbar-btn:hover, a.topbar-btn.active {
 	color: #fd602c;
 }
 /* blog holder 2
- -----------------------------------------------*/	
+ -----------------------------------------------*/
 .blog-holder2 {
 	width: 100%;
 	float: left;
@@ -5105,7 +5105,7 @@ a.topbar-btn:hover, a.topbar-btn.active {
 	color: #161616;
 }
 /* blog holder 3
- -----------------------------------------------*/	
+ -----------------------------------------------*/
 .blog-holder3 {
 	width: 100%;
 	float: left;
@@ -5151,7 +5151,7 @@ a.topbar-btn:hover, a.topbar-btn.active {
 	color: #fff;
 }
 /* blog holder 3 two
- -----------------------------------------------*/	
+ -----------------------------------------------*/
 .blog-holder3.two {
 	width: 100%;
 	float: left;
@@ -5164,7 +5164,7 @@ a.topbar-btn:hover, a.topbar-btn.active {
 	width: 100%;
 }
 /* blog holder 4
- -----------------------------------------------*/	
+ -----------------------------------------------*/
 .blog-holder4 {
 	width: 100%;
 	float: left;
@@ -5188,7 +5188,7 @@ a.topbar-btn:hover, a.topbar-btn.active {
 	color: #fff;
 }
 /* blog holder 5
- -----------------------------------------------*/	
+ -----------------------------------------------*/
 .blog-holder5 {
 	width: 100%;
 	float: left;
@@ -5227,7 +5227,7 @@ a.topbar-btn:hover, a.topbar-btn.active {
 
 /* Testimonials Style 2
  -----------------------------------------------*/
- 
+
 .testimonials2 {
 	width: 100%;
 	padding: 0px;
@@ -5269,7 +5269,7 @@ a.topbar-btn:hover, a.topbar-btn.active {
 }
 /* Testimonials Style 3
  -----------------------------------------------*/
- 
+
 .testimonials3 {
 	width: 100%;
 	padding: 0px;
@@ -5315,7 +5315,7 @@ a.topbar-btn:hover, a.topbar-btn.active {
 }
 /* Testimonials Style 4
  -----------------------------------------------*/
- 
+
 .testimonials4 {
 	width: 100%;
 	padding: 0px;
@@ -5331,7 +5331,7 @@ a.topbar-btn:hover, a.topbar-btn.active {
 }
 /* Testimonials Style 5
  -----------------------------------------------*/
- 
+
 .testimonials5 {
 	width: 100%;
 	padding: 0px;
@@ -5688,3 +5688,8 @@ div.demo .title span {
 	color: #333;
 }
 
+/* =============== Custom Css  =========== */
+
+div#node-117 {
+    float: right;
+}
