@@ -6041,7 +6041,20 @@ ul.sitemap li ul {
     width: 180px;
     z-index: 1;
 }
-
 .screens-top-padding{
 	padding-top:150px;
+}
+#block-search-form {
+    z-index: 3;
+    width: 90%;
+    margin: 30px auto 0;
+    background: rgba(40, 56, 145, 0.4);
+    padding: 1px 35px 35px;
+}
+#block-search-form h5.widget-title {
+    color: #ffffff;
+    font-size: 30px;
+}
+#block-md-slider-home-corporative {
+    top: -185px;
 }
