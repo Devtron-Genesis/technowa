@@ -6045,6 +6045,7 @@ ul.sitemap li ul {
 	padding-top:150px;
 }
 #block-search-form {
+    position: relative;
     z-index: 3;
     width: 90%;
     margin: 30px auto 0;
@@ -6055,6 +6056,10 @@ ul.sitemap li ul {
     color: #ffffff;
     font-size: 30px;
 }
+#block-search-form .error-search-box .email_input {
+	color: #ffffff;
+}
 #block-md-slider-home-corporative {
+	position: relative;
     top: -185px;
 }
