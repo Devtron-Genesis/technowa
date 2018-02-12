@@ -282,6 +282,10 @@ a.btn.btn-orange-2.btn-xround.btn-medium {
 .social-icons-3 {
   text-align: left !important;
 }
+.block-md-slider {
+    position: relative;
+    top: -185px;
+}
 
 
 
