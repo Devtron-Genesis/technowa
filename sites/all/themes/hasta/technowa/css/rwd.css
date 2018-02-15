@@ -61,6 +61,10 @@
   .md-layer-1-2-1 {
     font-size: 4.5em;
   }
+  /*  Contact us page webform */
+  .ds-2col-fluid.node-webform > .group-left {
+    width: 48% !important;
+}
 }
 @media only screen and (min-device-width: 990px) and (max-device-width: 1023px) {  /** Green **/
   body {
@@ -88,7 +92,20 @@
   .md-layer-1-2-1 {
     font-size: 4.5em;
   }
+  /* contact us page web form */
+  .ds-2col-fluid.node-webform > .group-left {
+    width: 44% !important;
 }
+}
+@media only screen and (max-device-width: 989px) {
+  body {
+
+  }
+  /*  Contact us page webform */
+  .ds-2col-fluid.node-webform > .group-left {
+    width: 100% !important;
+}
+  }
 @media only screen and (min-device-width: 769px) and (max-device-width: 989px) {  /** Orange **/
   body {
     /*background-color: orange;/*Breakpoint-colour*/
@@ -97,7 +114,7 @@
   .md-objects {
     top: 55px;
 }
-/* Slider Object number one */
+  /* Slider Object number one */
   .md-object.md-layer-1-0-1.md-layer {
     font-size: 7em;
   }
@@ -189,11 +206,11 @@
     margin: 55px auto 0;
 }
 /* Slider obtect  Tech-nowa */
-.md-object.md-layer-1-0-1.md-layer {
+  .md-object.md-layer-1-0-1.md-layer {
     font-size: 7em;
     top: 48%;
 }
-/* Slider Object   welconme to */
+  /* Slider Object   welconme to */
   .md-object.md-layer-1-0-0.md-layer {
     font-size: 5em;
     top: 40%;
@@ -339,7 +356,13 @@
   ul.toplist li a {
     font-size: 12px;
 }
-
+  .group-left {
+    width: 100%;
+}
+  /* Contanct us page */
+  div#node-117 iframe {
+    width: 288px;
+}
 }
 @media only screen and (max-device-width: 319px) {  /** Blue **/
   body {
@@ -411,7 +434,7 @@
   .btn.btn-small {
     padding: 1px 3px;
 }
-.md-slide-bullet-2 .md-bullets {
+  .md-slide-bullet-2 .md-bullets {
     bottom: 0px;
     text-align: center;
     margin-top: 5px;
@@ -423,7 +446,7 @@
     position: relative;
     top: -150px;
 }
-.error-search-box .input_submit {
+  .error-search-box .input_submit {
     width: 25%;
     height: 25px;
   }
@@ -437,5 +460,9 @@
   }
   ul.toplist li a {
     font-size: 12px;
+}
+  /* Contanct us page */
+  div#node-117 iframe {
+    width: 272px;
 }
 }
