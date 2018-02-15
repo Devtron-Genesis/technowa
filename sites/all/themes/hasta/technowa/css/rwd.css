@@ -336,6 +336,10 @@
     position: relative;
     top: -150px;
 }
+  ul.toplist li a {
+    font-size: 12px;
+}
+
 }
 @media only screen and (max-device-width: 319px) {  /** Blue **/
   body {
@@ -431,4 +435,7 @@
     margin-top: 20px;
     margin-bottom: 0px;
   }
+  ul.toplist li a {
+    font-size: 12px;
+}
 }

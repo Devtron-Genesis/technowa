@@ -244,7 +244,9 @@ section.section-copyrights.section-less-padding {
   float: left;
   margin-right: 7px;
 }
-
+ul.toplist li a {
+  font-size: 12px;
+}
 
 
 
@@ -286,6 +288,10 @@ a.btn.btn-orange-2.btn-xround.btn-medium {
     position: relative;
     top: -185px;
 }
+/* navigation menu responseviness */
+div#navbar-collapse-grid {
+  margin-top: 15px;
+}
 
 
 
@@ -321,7 +327,6 @@ a.btn.btn-orange-2.btn-xround.btn-medium {
 .i18n-de .navbar-default .navbar-brand {
     width: 115px;
 }
-
 
 }
 
