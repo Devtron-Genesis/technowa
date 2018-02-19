@@ -224,7 +224,7 @@ section.section-copyrights.section-less-padding {
 .views-field.views-field-title {
   padding: 10px 0px 0px 0px;
 }
-.views-field.views-field-body {
+.view-job-listing .views-row {
   border-bottom: solid 1px #283891;
   font-size: 17px;
   padding: 20px 0px;
