@@ -193,7 +193,8 @@ function unique_field_node_validate($node, $form) {
           $errfld[] = $field;
           $matches[$field] = $allmatch;
         }
-        $errmsg = t('This form requires that the fields @labels are a unique combination. The specified values are already used.');
+        $errmsg = t('You already applyed for this job');
+        // $errmsg = t('This form requires that the fields @labels are a unique combination. The specified values are already used.');
       }
     }
 
