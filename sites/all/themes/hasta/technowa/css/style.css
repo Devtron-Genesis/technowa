@@ -406,3 +406,22 @@ div#navbar-collapse-grid {
 span.locality i {
     color: #283891;
 }
+.widget-title {
+	display: none;
+}
+.webform-component--name {
+	float: left;
+}
+.webform-component--message {
+	float: right;
+}
+.form-item.webform-component.webform-component-email.webform-component--email {
+	float: left;
+	margin-top: 1px;
+}
+.form-item.webform-component.webform-component-textfield.webform-component--phone-number {
+	float: left;
+}
+.form-actions {
+	clear: both;
+}
