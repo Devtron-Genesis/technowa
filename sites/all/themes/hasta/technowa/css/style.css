@@ -425,3 +425,6 @@ span.locality i {
 .form-actions {
 	clear: both;
 }
+textarea#edit-submitted-message {
+	height: 183px;
+}
