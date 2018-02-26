@@ -227,7 +227,6 @@ section.section-copyrights.section-less-padding {
 .view-job-listing .views-row {
 /*  border-bottom: solid 1px #283891;
   font-size: 17px;*/
-  padding: 20px 0px;
 }
 .views-field.views-field-address {
   font-size: 17px;
@@ -339,19 +338,20 @@ div#navbar-collapse-grid {
 
 .view-content .views-field {
     background-color: white;
-    padding: 20px 20px 20px 20px;
-    margin: 20px;
+    padding: 30px;
+    margin: 0px 0px 40px;
 }
 .view-content .views-field h2 {
     color: #283891;
 }
 .view.view-job-listing.view-id-job_listing {
     background-color: #283891;
+    padding: 40px 40px 1px;
 }
 .view-content .views-field a: nth-child(2) {
     color: red !important;
 }
-.view.view-job-listing.view-id-job_listing span > a {
+/*.view.view-job-listing.view-id-job_listing span > a {
     border: 1px solid;
     padding: 10px 18px;
     background-color: #283891;
@@ -359,11 +359,11 @@ div#navbar-collapse-grid {
     display: inline-block;
     opacity: 0.8;
     text-decoration: none;
-}
-.view.view-job-listing.view-id-job_listing span > a:hover {
+}*/
+/*.view.view-job-listing.view-id-job_listing span > a:hover {
     opacity: 1;
     text-decoration: none;
-}
+}*/
 .field-name-field-apply-link-1 a {
     border: 1px solid;
     padding: 10px 18px;
@@ -389,4 +389,20 @@ div#navbar-collapse-grid {
 .field-name-field-apply-link a:hover {
     opacity: 1;
     text-decoration: none;
+}
+.job-body > a {
+    color: #283891;
+}
+.job-body {
+    border-bottom: 1px solid #283891;
+}
+.job-footer {
+    font-weight: bold;
+}
+.job-location {
+    float: left;
+    width: 50%;
+}
+span.locality i {
+    color: #283891;
 }
