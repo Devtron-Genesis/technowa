@@ -95,11 +95,19 @@
   /* contact us page web form */
 form#webform-client-form-35 {
     width: 85%;
-}
+  }
+   .page-node-138 .form-item {
+    float: left;
+    width: 100%;
+  }
 }
 @media only screen and (max-device-width: 989px) {
   body {
 
+  }
+  .page-node-138 .form-item {
+    float: left;
+    width: 100%;
   }
   /*  Contact us page webform */
   .ds-2col-fluid.node-webform > .group-left {
