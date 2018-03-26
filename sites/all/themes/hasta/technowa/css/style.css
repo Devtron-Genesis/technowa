@@ -338,6 +338,21 @@ div#navbar-collapse-grid {
 input#edit-submit-vacancies {
     margin-top: 0px;
 }
+  .md-object.md-layer-1-0-0.md-layer.keep {
+    top: 55% !important;
+}
+  .md-object.md-layer-1-0-1.md-layer.keep {
+    top: 65% !important;
+}
+  .md-object.md-layer-1-0-2.md-layer.keep {
+    top: 84% !important;
+}
+  .md-object.md-layer-1-0-4.keep {
+    top: 86% !important;
+}
+  .md-object.md-layer-1-0-3.md-layer.keep {
+    top: 92% !important;
+}
 }
 
 /*    Vacancies    */
