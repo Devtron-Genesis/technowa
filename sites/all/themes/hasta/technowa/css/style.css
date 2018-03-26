@@ -303,7 +303,10 @@ div#navbar-collapse-grid {
 @media (max-width: 768px) {
 .section-side-image .text-inner {
     padding: 0px;
-}
+  }
+  .front .md-layer-1-1-3 a, .front .md-layer-1-1-4 a {
+    margin-top: 10px;
+  }
 }
 
 
