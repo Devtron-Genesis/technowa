@@ -332,6 +332,12 @@ div#navbar-collapse-grid {
     margin: 0 auto;
     width: 300px;
 }
+.custom-menu.bottom_links p {
+    float: left
+}
+input#edit-submit-vacancies {
+    margin-top: 0px;
+}
 }
 
 /*    Vacancies    */
