@@ -10,7 +10,8 @@
   width: 8%;
 }
 ul.nav.navbar-nav > li > a.active-trail {
-  color: blue;
+  color: #fff;
+  background-color: #283891;
 }
 .page-node-64 .region.region-top {
   margin-bottom: -130px;
