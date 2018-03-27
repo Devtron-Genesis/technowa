@@ -9,6 +9,9 @@
   float: left;
   width: 8%;
 }
+ul.nav.navbar-nav > li > a.active-trail {
+  color: blue;
+}
 
 .i18n-de .navbar-header {
   float: left;
@@ -356,7 +359,7 @@ input#edit-submit-vacancies {
   .md-object.md-layer-1-0-3.md-layer.keep {
     top: 92% !important;
 }
-}
+} /* media querys closed */
 
 /*    Vacancies    */
 
