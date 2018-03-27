@@ -6,7 +6,7 @@
  * Shows for one menu the menu items accessible to the current user and
  * relevant operations.
  *
- * @param array $form
+ * @param array $old_form
  * @param array $form_state
  * @param array $menu
  *
@@ -17,8 +17,20 @@
  * @see menu_editor_overview_form_validate()
  * @see menu_editor_overview_form_submit()
  */
-function menu_editor_overview_form(array $form, array &$form_state, array $menu) {
-  $form['#attached']['css'] = array(drupal_get_path('module', 'menu') . '/menu.css');
+function menu_editor_overview_form(array $old_form, array &$form_state, array $menu) {
+
+  if (!empty($_POST['menu_editor:max_input_vars_reached'])) {
+    drupal_set_message(
+      t("The submitted form has more elements than supported by the server configuration."),
+      'warning');
+
+    watchdog(
+      'menu_editor',
+      'max_input_vars limit reached when trying to save a menu.',
+      array(),
+      WATCHDOG_WARNING);
+  }
+
   $sql = "
     SELECT m.load_functions, m.to_arg_functions, m.access_callback, m.access_arguments, m.page_callback, m.page_arguments, m.delivery_callback, m.title, m.title_callback, m.title_arguments, m.type, m.description, ml.*
     FROM {menu_links} ml LEFT JOIN {menu_router} m ON m.path = ml.router_path
@@ -104,10 +116,12 @@ function menu_editor_overview_form(array $form, array &$form_state, array $menu)
 function _menu_editor_overview_tree_form(array &$form, array &$form_state, array $tree) {
   $max_root_weight = 0;
   foreach ($tree as $data) {
-    $title = '';
     $item = $data['link'];
-    // Don't show callbacks; these have $item['hidden'] < 0.
-    if ($item && $item['hidden'] >= 0) {
+
+    if (!$item || $item['hidden'] < 0) {
+      // Don't show callbacks; these have $item['hidden'] < 0.
+    }
+    else {
       $item_key = 'mlid-' . $item['mlid'];
       // @todo This is bogus. The value might be in $form_state['input'][$item_key], but never in $form_state[$item_key].
       $weight = isset($form_state[$item_key]['weight']) ? $form_state[$item_key]['weight'] : $item['weight'];
@@ -136,10 +150,14 @@ function _menu_editor_overview_tree_form(array &$form, array &$form_state, array
         $item['hidden'] = !empty($item['options']['unaltered_hidden']);
       }
 
+      $item['description'] = isset($item['options']['attributes']['title'])
+        ? $item['options']['attributes']['title']
+        : '';
+
       $default_values = array(
         'link_title' => $item['link_title'],
         'link_path' => $path,
-        'description' => isset($item['options']['attributes']['title']) ? $item['options']['attributes']['title'] : '',
+        'description' => $item['description'],
         'enabled' => !$item['hidden'],
         'expanded' => $item['expanded'],
         'weight' => $weight,
@@ -151,7 +169,9 @@ function _menu_editor_overview_tree_form(array &$form, array &$form_state, array
 
       $form[$item_key]['#item'] = $item;
       $form[$item_key]['#attributes'] = $item['hidden'] ? array('class' => 'menu-disabled') : array('class' => 'menu-enabled');
-      $form[$item_key]['drag']['#markup'] = l($item['title'], $item['href'], $item['localized_options']) . ($item['hidden'] ? ' ('. t('disabled') .')' : '');
+      $form[$item_key]['drag']['#markup'] = ''
+        . l($item['title'], $item['href'], $item['localized_options'])
+        . _menu_editor_link_label_suffix($item);
 
       // Include i18n support.
       if (module_exists('i18n_menu')) {
@@ -223,11 +243,48 @@ function _menu_editor_overview_tree_form(array &$form, array &$form_state, array
 }
 
 /**
+ * Creates a label suffix with additional information about a menu link.
+ *
+ * This replicates a planned feature for Drupal core, which is discussed in
+ * @link https://www.drupal.org/project/drupal/issues/460408
+ *
+ * @param array $item
+ *   An array representing the menu link item.
+ *
+ * @return string
+ */
+function _menu_editor_link_label_suffix(array $item) {
+
+  $parts = array();
+
+  if ($item['hidden']) {
+    $parts[] = t('disabled');
+  }
+
+  if (!empty($item['node_unpublished'])) {
+    $parts[] = t('unpublished');
+  }
+
+  if ($item['link_path'] === 'user' && $item['module'] === 'system') {
+    $parts[] = t('logged in users only');
+  }
+
+  if (array() !== $parts) {
+    return ' (' . implode(', ', $parts) . ')';
+  }
+
+  return '';
+}
+
+
+/**
  * @param int|string $item_mlid
  * @param array $default_values
  * @param bool $multilingual_menu
  *
  * @return array
+ *
+ * @see menu_edit_item()
  */
 function _menu_editor_overview_tree_form_item($item_mlid, $default_values, $multilingual_menu = FALSE) {
 
@@ -241,11 +298,15 @@ function _menu_editor_overview_tree_form_item($item_mlid, $default_values, $mult
   $element['link_title'] = array(
     '#type' => 'textfield',
     '#size' => 25,
-    '#maxlength' => 128,
+    // Link title #maxlength should be the same as in Drupal core.
+    /* @see menu_edit_item() */
+    '#maxlength' => 255,
   );
   $element['link_path'] = array(
     '#type' => 'textfield',
     '#size' => 25,
+    // Link path #maxlength should be the same as in Drupal core.
+    /* @see menu_edit_item() */
     '#maxlength' => 255,
   );
   $element['description'] = array(
@@ -266,6 +327,7 @@ function _menu_editor_overview_tree_form_item($item_mlid, $default_values, $mult
     // and to reduce page size.
     '#type' => 'textfield',
     '#size' => 4,
+    /* @see _menu_editor_valid_weight() */
     '#element_validate' => array('_menu_editor_valid_weight'),
   );
   $element['mlid'] = array(
@@ -417,11 +479,26 @@ function menu_editor_overview_form_submit(array $form, array &$form_state) {
 
   $menu_name = $form['#menu']['menu_name'];
 
+  /**
+   * @var array[] $updated_items
+   *   Array to collect items that need to be newly created or updated.
+   *   Format: $[$item_key] = $item
+   *   with $item_key like 'mlid-1234' or 'mlid-new0'.
+   */
   $updated_items = array();
   $fields = array('expanded', 'weight', 'plid', 'link_title', 'link_path', 'description');
 
   foreach ($form_values as $item_key => $v) {
-    if (isset($form[$item_key]['#item'])) {
+
+    if (!isset($form[$item_key]['#item'])) {
+      // Either $form[$item_key] does not exist, or $form[$item_key]['#item']
+      // does not exist. This occurs if the key is from a form element that does
+      // not represent a menu link.
+      continue;
+    }
+
+    // Keep indentation level to reduce git noise.
+    if (true) {
       $element = $form[$item_key];
       $original_item = $item = $element['#item'];
 
@@ -443,6 +520,7 @@ function menu_editor_overview_form_submit(array $form, array &$form_state) {
             $item[$field] = $v[$field];
           }
         }
+        // Add item to be newly created.
         $updated_items[$item_key] = $item;
       }
       elseif (!empty($v['delete'])) {
@@ -460,6 +538,7 @@ function menu_editor_overview_form_submit(array $form, array &$form_state) {
           /** @noinspection TypeUnsafeComparisonInspection */
           if ($v[$field] != $element[$field]['#default_value']) {
             $item[$field] = $v[$field];
+            // Item was modified,
             $updated_items[$item_key] = $item;
           }
         }
@@ -469,8 +548,8 @@ function menu_editor_overview_form_submit(array $form, array &$form_state) {
       // Besides, while we operate with boolean, the database wants numeric 0/1.
       if ($v['enabled'] xor $element['enabled']['#default_value']) {
         // Checkbox for 'enabled' was changed.
-        $element['#item']['hidden'] = empty($v['enabled']) ? 1 : 0;
-        $updated_items[$item_key] = $element['#item'];
+        $item['hidden'] = empty($v['enabled']) ? 1 : 0;
+        $updated_items[$item_key] = $item;
       }
       else {
         // Checkbox for 'enabled' was not changed.
@@ -479,13 +558,9 @@ function menu_editor_overview_form_submit(array $form, array &$form_state) {
       if (!empty($form['#multilingual_menu'])) {
         $langcode = isset($element['language']['#default_value']) ? $element['language']['#default_value'] : $element['language']['#value'];
         if ($v['language'] !== $langcode) {
-          $element['#item']['language'] = $v['language'];
-          $updated_items[$item_key] = $element['#item'];
+          $item['language'] = $v['language'];
+          $updated_items[$item_key] = $item;
         }
-      }
-      // description is a special case
-      if (isset($updated_items[$item_key]['description'])) {
-        $updated_items[$item_key]['options']['attributes']['title'] = $updated_items[$item_key]['description'];
       }
     }
   }
@@ -558,6 +633,16 @@ function menu_editor_overview_form_submit(array $form, array &$form_state) {
       }
     }
 
+    if ('' !== $item['description']) {
+      $item['options']['attributes']['title'] = $item['description'];
+    }
+    else {
+      unset($item['options']['attributes']['title']);
+      if (empty($item['options']['attributes'])) {
+        unset($item['options']['attributes']);
+      }
+    }
+
     // @see menu_firstchild_menu_link_alter() expects $link['module'] to be set.
     $item += array(
       'module' => 'menu',
@@ -594,6 +679,8 @@ function menu_editor_overview_form_submit(array $form, array &$form_state) {
  * @return string
  *
  * @ingroup themeable
+ * @throws \Exception
+ *   from theme() call. Usually not going to happen.
  */
 function theme_menu_editor_overview_form(array $variables) {
   $form = $variables['form'];
