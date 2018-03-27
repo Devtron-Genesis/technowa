@@ -6,10 +6,13 @@
 function menu_editor_menu() {
   $items['admin/structure/menu/manage/%menu/poweredit'] = array(
     'title' => 'Power Edit',
+    /* @see drupal_get_form() */
     'page callback' => 'drupal_get_form',
+    /* @see menu_editor_overview_form() */
     'page arguments' => array('menu_editor_overview_form', 4),
     // 'title callback' => 'menu_editor_overview_title',
     // 'title arguments' => array(3),
+    /* @see menu_editor_form_access() */
     'access callback' => 'menu_editor_form_access',
     'access arguments' => array(4),
     'type' => MENU_LOCAL_TASK,
@@ -71,6 +74,30 @@ function menu_editor_theme() {
       'render element' => 'form',
     ),
   );
+}
+
+/**
+ * Implements hook_preprocess_THEMEHOOK
+ *
+ * @param array $variables
+ *
+ * @see theme_form()
+ */
+function menu_editor_preprocess_form(array &$variables) {
+  $form =& $variables['element'];
+
+  if (0
+    || !isset($form['#form_id'])
+    || 'menu_editor_overview_form' !== $form['#form_id']
+  ) {
+    return;
+  }
+
+  $form['#children'] = ''
+    . '<input type="hidden" name="menu_editor:max_input_vars_reached" value="1"/>'
+    . $form['#children']
+    . '<input type="hidden" name="menu_editor:max_input_vars_reached" value="0"/>'
+  ;
 }
 
 /**

@@ -91,6 +91,8 @@ function me_node_creation_node_insert($node) {
  * Implements hook_crumbs_plugins()
  *
  * @param crumbs_InjectedAPI_hookCrumbsPlugins $api
+ *
+ * @throws \Exception
  */
 function me_node_creation_crumbs_plugins($api) {
   $api->monoPlugin();
@@ -123,9 +125,12 @@ function menu_editor_menu_link_load($mlid) {
     $query->addField('ml', 'weight', 'link_weight');
     $query->fields('m');
     $query->condition('ml.mlid', $mlid);
+    /** @noinspection NullPointerExceptionInspection */
     if ($item = $query->execute()->fetchAssoc()) {
       $_cache[$mlid] =& $item;
       $item['weight'] = $item['link_weight'];
+      // The data being unserialized here is not coming from user input.
+      /** @noinspection UnserializeExploitsInspection */
       $item['load_functions'] = unserialize($item['load_functions']);
       _menu_link_translate($item);
       return $item;
@@ -181,12 +186,13 @@ function me_node_creation_title($type_arg, $item) {
  * Access callback for node/add/%node_type/mlid/%menu_editor_mlid
  *
  * @param object|mixed $type
+ *   A node type object, as returned from @see node_type_load()
  *
  * @return bool
  */
 function me_node_creation_create_node_access($type) {
   if (!is_object($type)) {
-    ddebug_backtrace();
+    // One should assume that this case never happens..
     return FALSE;
   }
   return node_access('create', $type->type);
