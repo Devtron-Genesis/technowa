@@ -12,6 +12,9 @@
 ul.nav.navbar-nav > li > a.active-trail {
   color: blue;
 }
+.site_wrapper .region-top {
+  margin-bottom: -130px;
+}
 
 .i18n-de .navbar-header {
   float: left;
